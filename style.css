@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 18px;
+
+}
+
+image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+image-container img {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+article {
+    background-size: cover;
+    padding: 1px;
+    box-shadow: 2px 2px 2px #000;
+    background-image: url('https://img.lovepik.com/photo/40197/6433_lovepik-indoor-home-background-creative-image_wh860.jpg');
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+h2 {
+    color: black;
+    background-color: burlywood;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    text-align: center;
+    background-color: burlywood;
+
+}
