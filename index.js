@@ -12,31 +12,31 @@ function getCharacters(done){
 getCharacters(data=>{
     data.results.forEach(personaje => {
      const article = document.createRange ().createContextualFragment(/* html */ `
-
      <article>
-       <div class="image-container">
-         <img src="${personaje.image}" alt="Personaje">
-       </div>
-       <h2>${personaje.name}</h2>
-       <h3>${personaje.status}</h3>
-       <h3>${personaje.species}</h3>
-       <h3>${personaje.gender}</h3>
-       <h3>${personaje.origin.name}</h3>
-
-
-
-       
-     </article>
-
+     <div class="image-container">
+       <img src="${personaje.image}" alt="Personaje">
+     </div>
+     <div class="info-container">
+      <p>Name</p>
+      <h2>${personaje.name}</h2>
+      <p id="estado">status</p>
+      <span id="text"> </span>
+      <h3 id="status">${personaje.status}</h3>
+      <p>species</p>
+      <h3>${personaje.species}</h3>
+      <p>Gender</p>  
+      <h3>${personaje.gender}</h3>
+      </div>
+   </article>
     `);
+
     const main =  document.querySelector("main");
     main.append(article);
 
 
-
     });
-
-
+    
+    
 
 
 });
