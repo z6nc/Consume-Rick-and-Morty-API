@@ -1,0 +1,46 @@
+body {
+    background-color: #272b33;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: rgb(240, 238, 238);
+
+}
+
+.Title h1 {
+    font-weight: 900;
+    font-size: 3.2em;
+    background: linear-gradient(to left, #00ff00 2%, #191a19 100%);
+    background-size: 200% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: horizontalColorChange 4s infinite alternate;
+    transition: color 0.3s ease;
+}
+
+@keyframes horizontalColorChange {
+    0% {
+        background-position: 0% 50%;
+
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.Title p {
+    font-size: 22px;
+    border-bottom: 1px solid rgb(36, 180, 17);
+}

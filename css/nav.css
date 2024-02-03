@@ -1,0 +1,27 @@
+nav {
+    backdrop-filter: blur(50px);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    
+    & h1{
+        font-size: 25px;
+        padding: 15px;
+        font-weight: 900;
+        cursor: pointer;
+        
+    }
+    & a {
+        padding: 15px;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    & a:hover{
+        color: goldenrod;
+    }
+
+
+
+}
