@@ -3,11 +3,27 @@
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr) ;
-    gap: 18px;
+    gap: 20px;
 
 }
+article {
+    background-color: #3c3e44;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 20px 40px;
+    border-radius:10px ;
+    transition: all .5s ease;
+    padding: 9px 20px;
 
-image-container {
+}
+article:hover{
+    box-shadow: 1px 2px 10px black;
+    
+}
+
+
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,21 +33,9 @@ image-container {
 .image-container img {
     width: 100%;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
 }
 
-article {
-    background-size: cover;
-    padding: 1px;
-    box-shadow: 2px 2px 2px #000;
-    background-image: url('https://img.lovepik.com/photo/40197/6433_lovepik-indoor-home-background-creative-image_wh860.jpg');
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-}
+
 
 h2 {
     color: black;
