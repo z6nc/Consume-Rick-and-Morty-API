@@ -15,11 +15,9 @@ function getCharacters(done) {
       const keys = Object.keys(personaje);
   
       if (keys.includes('status') && personaje.status.toLowerCase() === "alive") {
-        statusElement.textContent = "Está vivo";
-        statusElement.style.color = "green"; // Puedes ajustar el color según tus preferencias
+        statusElement.textContent = "❤️";
       } else {
-        statusElement.textContent = "Está muerto";
-        statusElement.style.color = "red"; // Puedes ajustar el color según tus preferencias
+        statusElement.textContent = "☠️ ";
       }
   
       statusElements.push(statusElement);
@@ -34,7 +32,7 @@ function getCharacters(done) {
     // Mostrar información de personajes
     data.results.forEach((personaje, index) => {
       const article = document.createRange().createContextualFragment(`
-          <article data-aos="flip-right">
+          <article >
             <h2>${personaje.name}</h2>
             <div class="image-container">
               <img src="${personaje.image}" alt="Personaje">

@@ -1,22 +1,37 @@
 
 :root{
-  --color-Fondo:  goldenrod;
+  --color-Fondo:   linear-gradient(#ffd700, #c0a080);;
+    --bg-FondoPrincipal:  rgb(240, 238, 238);
+}
 
+h1{
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 20px;
 }
 main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-columns: repeat(4, 1fr) ;
     gap: 7px;
 }
 article {
-  background-color: var(--color-Fondo); /* Azul claro en formato RGBA */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  background: var(--color-Fondo);
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   border-radius:10px ;
-  margin: 20px 40px;
+  margin: 18px 20px;
   border-radius: 15px;
   max-height: 100%;
+  transition: all .5s ease;
+  cursor: pointer;
+  filter: grayscale(20%);
+}
+article:hover{
+  transform: translateY(-20px);
+  box-shadow: 10px 20px 10px rgb(95, 95, 95);
+  filter: grayscale(2%);
+  -webkit-filter: grayscale(2%);
 }
 article h2 {
   color: white;
@@ -35,9 +50,10 @@ article h2 {
 
 .image-container img {
   width: 80%;
-  height: auto; 
-  object-fit: cover;
+  height: auto;
+  object-fit: cover;  
 }
+
 
 .info-container{
   border: 1px solid white;
