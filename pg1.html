@@ -22,19 +22,19 @@
         </div>
     </nav>
      
-    <div>
+    <div class="Principal">
         <h1>Characters</h1>
+        <div class="Pages" aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="pg1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="pg2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </div>
     </div>
-    <div class="Pages" aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="pg1.html">1</a></li>
-          <li class="page-item"><a class="page-link" href="pg2.html">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </div>
-    <br>
+    
     <main>
 
     </main>
@@ -46,12 +46,23 @@
         margin: 0;
         padding: 0;
       }
-    h1{
+      .Principal{
+        margin: 20px;
+      }
+      .Principal h1{
         text-align: center;
         font-size: 45px;
         margin-bottom: 20px;
-    }
-   
+        font-weight: 900;
+        color: var(--color-Fondo);
+        text-shadow: 1px 1px 4px black;
+  font-family: 'Get Schwifty';
+
+      }
+      .Pages{
+        display: flex;
+        justify-content: flex-end;
+      }
 </style>
 <script src="index.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -15,7 +15,7 @@
 <body>
 
     <nav  >
-        <h1>Rick and Morty</h1>
+        <h1>Rick and Morty api</h1>
         <div class="more">
             <a href="pg1.html">Characters</a>
             <a href="index.html">
@@ -26,11 +26,60 @@
      
     <div class="Title">
         <h1>The Rick and Morty </h1>
-        <p>Information</p>
+        <div class="move">
+            <img src="/portal.png" alt="">
+             <button> <a href="">Come here !</a></button>
+        </div>
+        <figure>
+            <img src="/p.png" alt="">
+            <img src="/image-removebg-preview.png" alt="">
+        </figure>
     </div>
+   
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
+<style>
+    .move{
+        display: flex;
+        margin-right: 110px;
+    }
+    .move img{
+        width: 120px;
+        animation:moves 1s infinite
+    }
+    @keyframes moves {
+        50%{
+            transform: translateX(15px);
+        }
+        100%{
+            transform: translateX(0px);
+
+        }
+        
+    }
+
+    .Title figure{
+        z-index: 2;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .Title figure img:nth-child(1){
+        position: absolute;
+        width: 250px;
+        right: 440px;
+        top: -40px;    
+
+    }
+    .Title figure img:nth-child(2){
+        position: absolute;
+        width: 200px;
+        left: 470px;
+        top: -20px;    
+
+    }
+</style>
 </html>

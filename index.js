@@ -15,6 +15,7 @@ function getCharacters(done) {
       const keys = Object.keys(personaje);
   
       if (keys.includes('status') && personaje.status.toLowerCase() === "alive") {
+
         statusElement.textContent = "❤️";
       } else {
         statusElement.textContent = "☠️ ";

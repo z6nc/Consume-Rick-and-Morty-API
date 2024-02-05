@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff');
+  }
+
+  :root{
+    --bgtitulo:#00b0c8;
+    --bgborder:#72cb17;
+  }
 body {
     box-sizing: border-box;
     margin: 0;
@@ -10,36 +19,35 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    background-color: rgb(240, 238, 238);
-
+    height: 85vh;
+    font-family: 'Get Schwifty';
 }
 
 .Title h1 {
     font-weight: 900;
     font-size: 3.2em;
-    background: linear-gradient(to left, #00ff00 2%, #191a19 100%);
+    color: var(--bgtitulo);
     background-size: 200% 100%;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: horizontalColorChange 4s infinite alternate;
-    transition: color 0.3s ease;
+    font-size: 7em;
+    text-shadow: 10px 10px 10px var(--bgborder);
+    margin-bottom: 50px;
+    
 }
 
-@keyframes horizontalColorChange {
-    0% {
-        background-position: 0% 50%;
-
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
+.Title button{
+    padding: 9px 17px;
+    border: none;
+    background-color: white;
 }
 
 
-.Title p {
+.Title a {
     font-size: 22px;
-    border-bottom: 1px solid rgb(36, 180, 17);
+    letter-spacing: 1px;
+    font-weight: 900;
+    color: var(--bgtitulo);
+    transition: .5s all ease;
+}
+.Title a:hover{
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.384);
 }
