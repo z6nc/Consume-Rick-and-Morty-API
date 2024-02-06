@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body >
     <nav>
         <h1>Rick and Morty</h1>
         <div class="more">
@@ -56,34 +56,17 @@
 </body>
 <style>
     body {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
-    }
+        box-sizing: border-box;
+       background: var(--bg-FondoPrincipal);
+      }
 
-    .Principal {
-        margin: 20px;
-    }
-
-    .Principal h1 {
-        text-align: center;
-        font-size: 45px;
-        margin-bottom: 20px;
-        font-weight: 900;
-        color: var(--color-Fondo);
-        text-shadow: 1px 1px 4px black;
-        font-family: 'Get Schwifty';
-
-    }
-    .Principal .SecondP{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-    }
+    
     
 </style>
 <script src="/js/index.js"></script>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();

@@ -10,6 +10,7 @@
 }
 
 
+
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr) ;
@@ -75,6 +76,27 @@ article h2 {
 
 .info-container h3{
   font-size: 20px;
+}
+
+.Principal {
+  margin: 20px;
+}
+
+.Principal h1 {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: var(--color-Fondo);
+  text-shadow: 1px 1px 4px black;
+  font-family: 'Get Schwifty';
+
+}
+.Principal .SecondP{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 

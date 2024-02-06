@@ -1,57 +1,88 @@
 @font-face {
-    font-family: 'Get Schwifty';
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff');
-  }
-
-  :root{
-    --bgtitulo:#00b0c8;
-    --bgborder:#72cb17;
-    --bgPrincipal:rgb(233, 233, 233);
-  }
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background: var(--bgPrincipal);
-
+  font-family: "Get Schwifty";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff");
 }
 
+:root {
+  --bgtitulo: #00b0c8;
+  --bgborder: #72cb17;
+  --bgPrincipal: rgb(233, 233, 233);
+}
+
+
+.invisible {
+    opacity: 0;
+}
 .Title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 85vh;
-    font-family: 'Get Schwifty';
-    background: var(--bgPrincipal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 85vh;
+  font-family: "Get Schwifty";
+  background: var(--bgPrincipal);
 }
 
 .Title h1 {
-    font-weight: 900;
-    font-size: 3.2em;
-    color: var(--bgtitulo);
-    background-size: 200% 100%;
-    font-size: 7em;
-    text-shadow: 10px 10px 10px var(--bgborder);
-    margin-bottom: 50px;
-    
+  font-weight: 900;
+  font-size: 3.2em;
+  color: var(--bgtitulo);
+  background-size: 200% 100%;
+  font-size: 7em;
+  text-shadow: 10px 10px 10px var(--bgborder);
+  margin-bottom: 50px;
+  cursor: default;
 }
 
-.Title button{
-    padding: 9px 17px;
-    border: none;
-    background:var(--bgPrincipal)
+.Title button {
+  padding: 9px 17px;
+  border: none;
+  background: var(--bgPrincipal);
 }
-
 
 .Title a {
-    font-size: 22px;
-    letter-spacing: 1px;
-    font-weight: 900;
-    color: var(--bgtitulo);
-    transition: .5s all ease;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: var(--bgtitulo);
+  transition: 0.5s all ease;
 }
-.Title a:hover{
-    color: #72cb17;
+.Title a:hover {
+  color: #72cb17;
+}
+.move {
+  display: flex;
+  margin-right: 110px;
+}
+.move img {
+  width: 120px;
+  animation: moves 1s infinite;
+}
+@keyframes moves {
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.Title figure {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+.Title figure img:nth-child(1) {
+  position: absolute;
+  width: 250px;
+  right: 440px;
+  top: -40px;
+}
+.Title figure img:nth-child(2) {
+  position: absolute;
+  width: 200px;
+  left: 470px;
+  top: -20px;
 }

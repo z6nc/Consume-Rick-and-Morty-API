@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/loading.css" />
+    <title>Página de Carga</title>
+  </head>
+
+  <body>
+    <section data-barba="container">
+       <h1>Loading API ...</h1>
+      <img src="/img/dancin.png" alt="" />
+      <span class="loader"></span>
+    </section>
+  </body>
+  <script>
+    setTimeout(function () {
+      window.location.href = "pg1.html";
+    }, 1000);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
