@@ -6,11 +6,14 @@
   :root{
     --bgtitulo:#00b0c8;
     --bgborder:#72cb17;
+    --bgPrincipal:rgb(233, 233, 233);
   }
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background: var(--bgPrincipal);
+
 }
 
 .Title {
@@ -21,6 +24,7 @@ body {
     text-align: center;
     height: 85vh;
     font-family: 'Get Schwifty';
+    background: var(--bgPrincipal);
 }
 
 .Title h1 {
@@ -37,7 +41,7 @@ body {
 .Title button{
     padding: 9px 17px;
     border: none;
-    background-color: white;
+    background:var(--bgPrincipal)
 }
 
 
@@ -49,5 +53,5 @@ body {
     transition: .5s all ease;
 }
 .Title a:hover{
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.384);
+    color: #72cb17;
 }

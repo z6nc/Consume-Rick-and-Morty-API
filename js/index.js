@@ -6,6 +6,14 @@ function getCharacters(done) {
         done(data);
       });
   }
+
+  function Contador(personajes) {
+    const results = document.querySelector(`#contador`);
+    const contador = personajes.length;
+    results.textContent = contador;
+    return contador;
+}
+
   
   function Personas(personajes) {
     const statusElements = [];
@@ -29,6 +37,7 @@ function getCharacters(done) {
   
   getCharacters((data) => {
     const main = document.querySelector("main");
+    const contadorElement = document.querySelector("#contador"); 
   
     // Mostrar información de personajes
     data.results.forEach((personaje, index) => {
@@ -44,6 +53,7 @@ function getCharacters(done) {
               <h3>${personaje.origin.name}</h3>
               <h3>${personaje.gender}</h3>
               <h3 class="status" id="status-${index}"></h3>
+
             </div>
           </article>
         `);
@@ -51,7 +61,7 @@ function getCharacters(done) {
       main.append(article);
     });
   
-    // Llamada a la función Personas para actualizar los estados
     Personas(data.results);
+    Contador(data.results);
   });
   
