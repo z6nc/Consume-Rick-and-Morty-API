@@ -1,5 +1,5 @@
 function getCharacters(done) {
-    const result = fetch("https://rickandmortyapi.com/api/character/?page=2");
+    const result = fetch("https://rickandmortyapi.com/api/character/?page=1");
     result
       .then((Response) => Response.json())
       .then((data) => {
@@ -10,7 +10,7 @@ function getCharacters(done) {
   function Contador(personajes) {
     const results = document.querySelector(`#contador`);
     const contador = personajes.length;
-    results.textContent = contador;
+    results.textContent = contador + " Characters ";
     return contador;
 }
 
@@ -24,9 +24,9 @@ function getCharacters(done) {
   
       if (keys.includes('status') && personaje.status.toLowerCase() === "alive") {
 
-        statusElement.textContent = "❤️";
+        statusElement.textContent = "❤️ Alive ";
       } else {
-        statusElement.textContent = "☠️ ";
+        statusElement.textContent = "☠️ Dead ";
       }
   
       statusElements.push(statusElement);
@@ -43,16 +43,18 @@ function getCharacters(done) {
     data.results.forEach((personaje, index) => {
       const article = document.createRange().createContextualFragment(`
           <article >
-            <h2>${personaje.name}</h2>
             <div class="image-container">
               <img src="${personaje.image}" alt="Personaje">
             </div>
+            <h2>${personaje.name}</h2>
             <div class="info-container">
-              <h3>${personaje.species}</h3>
+              <div class="subInfo">
+              <p class="status" id="status-${index}"></p> -
+              <p>${personaje.species}</p>
+              </div>
               <h3>${personaje.location.name}</h3>
               <h3>${personaje.origin.name}</h3>
               <h3>${personaje.gender}</h3>
-              <h3 class="status" id="status-${index}"></h3>
 
             </div>
           </article>

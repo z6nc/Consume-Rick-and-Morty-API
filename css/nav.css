@@ -7,29 +7,27 @@ nav {
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  font-family: 'Get Schwifty';
 }
 
 nav h1 {
-  color: #00b0c8;
+  color: rgb(16, 161, 28);
   font-size: 25px;
   padding: 15px;
   font-weight: 900;
   cursor: pointer;
-  text-shadow: 2px 2px 2px #141414;
+  font-family: 'Get Schwifty';
+
  }
 
 nav a {
-  color: #00b0c8;
+  color: rgb(16, 161, 28);
   padding: 1px 15px;
   font-size: 20px;
   text-decoration: none;
   font-weight: 900;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 2px rgb(12, 12, 12);
   transition: .5s all ease;
+  font-family: 'Protest Revolution', sans-serif;
 }
 
-nav a:hover {
-  color: rgb(16, 161, 28);
-}
+
