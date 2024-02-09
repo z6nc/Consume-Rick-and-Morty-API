@@ -1,15 +1,21 @@
+function nextpage() {
+  pagina++
+}
 
 function getCharacters(done) {
-  
-  let result = fetch("https://rickandmortyapi.com/api/character/?page=25");
-  result
-    .then((Response) => Response.json())
-    .then((data) => {
-      done(data);
-    });
-  
+ 
 
-}
+    let result = fetch(
+      "https://rickandmortyapi.com/api/character/?page= " + pagina
+    );
+    result
+      .then((Response) => Response.json())
+      .then((data) => {
+        done(data);
+      });
+    
+  }
+ 
 
 function Contador(personajes) {
   const results = document.querySelector(`#contador`);
@@ -18,7 +24,6 @@ function Contador(personajes) {
   results.textContent = contador + " Characters ";
   return contador;
 }
-
 
 function Personas(personajes) {
   const statusElements = [];
@@ -29,13 +34,12 @@ function Personas(personajes) {
 
     const keys = Object.keys(personaje);
 
-    if (keys.includes('status') && personaje.status.toLowerCase() === "alive") {
+    if (keys.includes("status") && personaje.status.toLowerCase() === "alive") {
       bgTitle.style.backgroundColor = "#018743";
       statusElement.textContent = "🟢 Alive ";
     } else {
       statusElement.textContent = "🔴 Dead ";
       bgTitle.style.backgroundColor = "#d93938";
-
     }
 
     statusElements.push(statusElement);
@@ -63,7 +67,7 @@ getCharacters((data) => {
               </div>
              <b>Origen :</b> <h3>${personaje.origin.name}</h3>
              <b>Last known location:</b> <h3>${personaje.location.name}</h3>
-             <b>Gender:</b><h3>${personaje.residents}</h3>
+             <b>Gender:</b><h3>${personaje.gender}</h3>
 
             </div>
           </article>
