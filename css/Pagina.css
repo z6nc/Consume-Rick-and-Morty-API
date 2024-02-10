@@ -102,3 +102,12 @@ article h2 {
   display: flex;
   gap: 4px;
 }
+/* colors for Characters card in javascript */
+.alive {
+  background-color: #018743; 
+}
+
+.dead {
+  background-color: #d93938; 
+}
+
