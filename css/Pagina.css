@@ -11,10 +11,9 @@
 
 main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Usa auto-fit con minmax para columnas responsivas */
   font-family: 'Protest Revolution', sans-serif;
-
 }
 article {
   background: var(--bgFondoCard);
@@ -67,7 +66,10 @@ article h2 {
 }
 
 .info-container h3 {
-  font-size: 20px;
+  font-size: 17px;
+}
+.info-container b {
+  color: #676867;
 }
 
 .Principal {
@@ -101,6 +103,7 @@ article h2 {
 .info-container .subInfo{
   display: flex;
   gap: 4px;
+  
 }
 /* colors for Characters card in javascript */
 .alive {
