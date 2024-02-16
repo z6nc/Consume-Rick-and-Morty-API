@@ -95,3 +95,19 @@ section img {
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
+
+@media only screen and (min-width: 200px) and (max-width: 900px) {
+  section {
+    height: 90vh;
+  }
+  section h1 {
+    font-family: "Get Schwifty";
+    font-size: 45px;
+  }
+  section img {
+    width: 53%;
+  }
+  .loader {
+    margin-top: 20px;
+  }
+}

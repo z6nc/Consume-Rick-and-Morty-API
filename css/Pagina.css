@@ -63,13 +63,15 @@ article h2 {
   font-size: 20px;
   height: 45%;
   color: rgb(245, 245, 245);
+  letter-spacing: 1px;
+  
 }
 
 .info-container h3 {
   font-size: 17px;
 }
 .info-container b {
-  color: #676867;
+  color: #a5a5a5;
 }
 
 .Principal {
@@ -103,7 +105,8 @@ article h2 {
 .info-container .subInfo{
   display: flex;
   gap: 4px;
-  
+  margin-top: -20px;
+  font-size: 21px;
 }
 /* colors for Characters card in javascript */
 .alive {
