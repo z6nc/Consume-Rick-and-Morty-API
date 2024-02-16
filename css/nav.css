@@ -30,4 +30,15 @@ nav a {
   font-family: 'Protest Revolution', sans-serif;
 }
 
+@media only screen and (min-width: 200px) and (max-width: 900px) {
+  nav h1 {
+    font-size: 20px;
+  
+   }
+   nav a:nth-child(1){
+    display: none;
+    
+   }
+
+}
 

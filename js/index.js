@@ -9,7 +9,7 @@ function getCharacters(done, url = "https://rickandmortyapi.com/api/character/?p
     .then((data) => {
       btnNext = data.info.next ? `<button class="btn" onclick="next('${data.info.next}')">-></button>` : '';
       btnPrevious = data.info.prev ? `<button class="btn" onclick="previous('${data.info.prev}')"><-</button>` : '';
-      buttons.innerHTML = btnPrevious + url  + btnNext
+      buttons.innerHTML = btnPrevious + " "  + btnNext
       done(data);
     });
 }
